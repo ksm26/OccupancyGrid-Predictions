@@ -2,7 +2,7 @@
 
 ##  <div align="center"> Predicting Future Occupancy Grids in Dynamic Environment with Spatio-Temporal Learning  </div>                      
 
-##  <div align="center">  ![INRIA](https://github.com/ksm26/SpatioTemporal-Predictions/blob/master/images/Inria.jpg | width=1200)  </div>
+##  <div align="center">  ![INRIA](https://github.com/ksm26/SpatioTemporal-Predictions/blob/master/images/Inria.jpg=1200*500)  </div>
 
 
 ## Motivation
