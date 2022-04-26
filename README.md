@@ -1,13 +1,9 @@
-# SpatioTemporal-Predictions
-Predicting Future Occupancy Grids in Dynamic Environment with Spatio-Temporal Learning
+#  <div align="center"> SpatioTemporal-Predictions </div>
 
-#  <div align="center"> Master Thesis </div>
+##  <div align="center"> Predicting Future Occupancy Grids in Dynamic Environment with Spatio-Temporal Learning  </div>                      
 
-##  <div align="center"> Adaptive and robust control in Reinforcement Learning through Self-Supervised Representation Learning  </div>                      
+##  <div align="center">  ![INRIA](https://www.google.com/search?q=inria+logo&client=ubuntu&hs=Lv2&sxsrf=APq-WBuQDX_cpjppX0WBfeI1DB3O7JTpbg:1650973698798&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjfsuam1LH3AhWvzYUKHeQrC0oQ_AUoAXoECAEQAw&biw=1621&bih=949&dpr=1#imgrc=OQNwxBaUIox83M)  </div>
 
-##  <div align="center">  ![The-EIT-Digital-Master-School](https://user-images.githubusercontent.com/24546547/99292036-fc3ff500-2840-11eb-8a5c-8165d583ac87.jpg) ![tu berlin logo](https://user-images.githubusercontent.com/24546547/99292166-22fe2b80-2841-11eb-9a87-c4c990cb3374.jpg) ![Logo-Uni-T__bingen-main_image (1)](https://user-images.githubusercontent.com/24546547/99292173-24c7ef00-2841-11eb-864a-c2a2ba71e908.jpg) </div>
-
-**This is a pre-release of unpublished work. Please refer to the [license notice](#license).**
 
 ## Motivation
 
