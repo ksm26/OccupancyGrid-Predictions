@@ -5,11 +5,10 @@
 ##  <div align="center"> <img src="https://github.com/ksm26/SpatioTemporal-Predictions/blob/master/images/Inria.jpg" alt="INRIA" width="200" height="50"/> </div>
 
 
-## Motivation
+## Abstract
+Reliably predicting future occupancy of highly dynamic urban environments is an important precursor for safe autonomous navigation. Common challenges in the prediction include forecasting the relative position of other vehicles, modelling the dynamics of vehicles subjected to different traffic conditions, and vanishing surrounding objects. To tackle these challenges, we propose a spatio-temporal prediction network pipeline that takes the past information from the environment and semantic labels separately for generating future occupancy predictions. Compared to the current SOTA, our approach predicts occupancy for a longer horizon of 3 seconds and in a relatively complex environment from the nuScenes dataset. Our experimental results demonstrate the ability of spatio-temporal networks to understand scene dynamics without the need for HD-Maps and explicit modeling dynamic objects. We publicly release our occupancy grid dataset based on nuScenes to support further research.
 
-Dynamically changing constraints in robotics demand the ability to learn, adapt, and reproduce tasks. The robotic workspace is sometimes unpredictable and high dimensional, limiting the scalability of Supervised and Reinforcement Learning (RL). In order to tackle these constraints, we undertake self-supervised learning (SSL) approaches for inferring and updating the system dynamics within model-based reinforcement learning algorithms. 
-
-The project explores representation learning for adaptive control strategies in state space with a focus on inferring internal system dynamics through self-supervised learning. In particular, we are interested in combining recent progress in domain adaptation and transfer learning with the SSL framework, allowing  the agent to adapt across diverse environments and tasks.  
+![teaser](https://github.com/ksm26/SpatioTemporal-Predictions/blob/master/images/teaser.png)
 
 ## Environments
 We proceed by making pertubations in RL agent's internal dynamics and testing the performance of RL policies over this dynamic changes. For reference, the performance of TD3 on different perturbed agents can be seen as:
