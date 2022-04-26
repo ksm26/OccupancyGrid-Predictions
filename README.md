@@ -4,7 +4,7 @@
 
 ##  <div align="center">  ![INRIA](https://github.com/ksm26/SpatioTemporal-Predictions/blob/master/images/Inria.jpg)  </div>
 
-##  <div align="center"> <img src="https://github.com/ksm26/SpatioTemporal-Predictions/blob/master/images/Inria.jpg" alt="INRIA" width="1000"/> </div>
+##  <div align="center"> <img src="https://github.com/ksm26/SpatioTemporal-Predictions/blob/master/images/Inria.jpg" alt="INRIA" width="200" height="50"/> </div>
 
 
 ## Motivation
