@@ -10,7 +10,7 @@ Reliably predicting future occupancy of highly dynamic urban environments is an 
 
 ##  <div align="center"> <img src="https://github.com/ksm26/SpatioTemporal-Predictions/blob/master/images/teaser.png" alt="teaser" width="800" height="400"/> </div>
 
-## Environments
+## Dataset generation
 We proceed by making pertubations in RL agent's internal dynamics and testing the performance of RL policies over this dynamic changes. For reference, the performance of TD3 on different perturbed agents can be seen as:
  
 ![ezgif-4-9a3009d65e09](https://user-images.githubusercontent.com/24546547/99555041-2a980e80-29c0-11eb-9cd2-d5f0ac69c3e2.gif)
