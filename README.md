@@ -13,11 +13,12 @@ Reliably predicting future occupancy of highly dynamic urban environments is an 
 ## Dataset generation
 We proceed by making pertubations in RL agent's internal dynamics and testing the performance of RL policies over this dynamic changes. For reference, the performance of TD3 on different perturbed agents can be seen as:
  
-![ezgif-4-9a3009d65e09](https://user-images.githubusercontent.com/24546547/99555041-2a980e80-29c0-11eb-9cd2-d5f0ac69c3e2.gif)
-![ezgif-4-d586b8042543](https://user-images.githubusercontent.com/24546547/99555089-35eb3a00-29c0-11eb-8ecd-24c3bb9cde36.gif)
-![ezgif-4-88d258069438](https://user-images.githubusercontent.com/24546547/99555100-397ec100-29c0-11eb-9d85-36a3ca9c6b60.gif)
-![ezgif-4-a96fdd903d91](https://user-images.githubusercontent.com/24546547/99555115-3daade80-29c0-11eb-80b0-5075bff435ec.gif)
+![ezgif-4-9a3009d65e09](https://github.com/ksm26/SpatioTemporal-Predictions/blob/master/images/scene1.gif)
+![ezgif-4-d586b8042543](https://github.com/ksm26/SpatioTemporal-Predictions/blob/master/images/scene2.gif)
+![ezgif-4-88d258069438](https://github.com/ksm26/SpatioTemporal-Predictions/blob/master/images/scene3.gif)
+![ezgif-4-a96fdd903d91](https://github.com/ksm26/SpatioTemporal-Predictions/blob/master/images/scene4.gif)
 
+The dataset is hosted at: <a href="https://archive.org/details/nuscenes-occupancy-grids-dataset">https://archive.org/details/nuscenes-occupancy-grids-dataset</a>
 
 ### &emsp; &emsp; Hopper &emsp; &emsp; &emsp; &emsp;  &emsp; Walker &emsp; &emsp; &emsp; &emsp; &emsp; Ant &emsp; &emsp; &emsp; &emsp; &emsp; Halfcheetah
 
@@ -35,10 +36,10 @@ Self-supervised learning based on representations assists to develop policies th
 ## Most related work: 
 ### Robustness in Reinforcement Learning
 
-<a href="https://bair.berkeley.edu/blog/2019/03/18/rl-generalization/">C. Packer et al. (2019)</a> proposed a generalization framework for assessing Deep RL algorithms.<a href="https://arxiv.org/pdf/1803.11347.pdf"> I. Clavera et al. (2019)</a> argue that unexpected perturbations and unseen situations cause the specialized RL policies to fail at test environments. Accordingly, authors proposes a framework that demonstrates a simulated agent adapting their behavior online to novel terrains, crippled body parts, and highly-dynamic environments. 
+
 
 ### Using Representations in Reinforcement Learning
-<a href="https://arxiv.org/pdf/2004.04136.pdf">A. Srinivas et al. (2020)</a> presents Contrastive Unsupervised Representations for RL (CURL). CURL extracts high-level features from raw pixels using contrastive learning and performs off policy control on top of the extracted features. <a href="https://arxiv.org/pdf/2006.10742.pdf">A. Zhang et al. (2020)</a> demonstrate the effectiveness of learning representations at disregarding task-irrelevant information in RL. <a href="https://arxiv.org/pdf/2007.04309.pdf">N. Hansen et al. (2020)</a> explores the use of self-supervision to allow the RL policy to continue training after deployment without using any rewards.
+
 
 ## Experimentation pipeline
 
