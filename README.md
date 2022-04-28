@@ -2,16 +2,15 @@
 
 ##  <div align="center"> Predicting Future Occupancy Grids in Dynamic Environment with Spatio-Temporal Learning  </div>                      
 
-##  <div align="center">  ![INRIA](https://www.google.com/search?q=inria+logo&client=ubuntu&hs=Lv2&sxsrf=APq-WBuQDX_cpjppX0WBfeI1DB3O7JTpbg:1650973698798&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjfsuam1LH3AhWvzYUKHeQrC0oQ_AUoAXoECAEQAw&biw=1621&bih=949&dpr=1#imgrc=OQNwxBaUIox83M)  </div>
+##  <div align="center"> <img src="https://github.com/ksm26/SpatioTemporal-Predictions/blob/master/images/Inria.jpg" alt="INRIA" width="200" height="50"/> </div>
 
 
-## Motivation
+## Abstract
+Reliably predicting future occupancy of highly dynamic urban environments is an important precursor for safe autonomous navigation. Common challenges in the prediction include forecasting the relative position of other vehicles, modelling the dynamics of vehicles subjected to different traffic conditions, and vanishing surrounding objects. To tackle these challenges, we propose a spatio-temporal prediction network pipeline that takes the past information from the environment and semantic labels separately for generating future occupancy predictions. Compared to the current SOTA, our approach predicts occupancy for a longer horizon of 3 seconds and in a relatively complex environment from the nuScenes dataset. Our experimental results demonstrate the ability of spatio-temporal networks to understand scene dynamics without the need for HD-Maps and explicit modeling dynamic objects. We publicly release our occupancy grid dataset based on nuScenes to support further research.
 
-Dynamically changing constraints in robotics demand the ability to learn, adapt, and reproduce tasks. The robotic workspace is sometimes unpredictable and high dimensional, limiting the scalability of Supervised and Reinforcement Learning (RL). In order to tackle these constraints, we undertake self-supervised learning (SSL) approaches for inferring and updating the system dynamics within model-based reinforcement learning algorithms. 
+##  <div align="center"> <img src="https://github.com/ksm26/SpatioTemporal-Predictions/blob/master/images/teaser.png" alt="teaser" width="800" height="400"/> </div>
 
-The project explores representation learning for adaptive control strategies in state space with a focus on inferring internal system dynamics through self-supervised learning. In particular, we are interested in combining recent progress in domain adaptation and transfer learning with the SSL framework, allowing  the agent to adapt across diverse environments and tasks.  
-
-## Environments
+## Dataset generation
 We proceed by making pertubations in RL agent's internal dynamics and testing the performance of RL policies over this dynamic changes. For reference, the performance of TD3 on different perturbed agents can be seen as:
  
 ![ezgif-4-9a3009d65e09](https://user-images.githubusercontent.com/24546547/99555041-2a980e80-29c0-11eb-9cd2-d5f0ac69c3e2.gif)
