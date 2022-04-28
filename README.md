@@ -13,17 +13,13 @@ Reliably predicting future occupancy of highly dynamic urban environments is an 
 ## Dataset generation
 We proceed by making pertubations in RL agent's internal dynamics and testing the performance of RL policies over this dynamic changes. For reference, the performance of TD3 on different perturbed agents can be seen as:
  
- ##  <div> <img src="https://github.com/ksm26/SpatioTemporal-Predictions/blob/master/images/scene1.gif" alt="Scene1" width="200" height="100"/> </div>
- 
-![ezgif-4-9a3009d65e09](https://github.com/ksm26/SpatioTemporal-Predictions/blob/master/images/scene1.gif)
+ ##  <div> <img src="https://github.com/ksm26/SpatioTemporal-Predictions/blob/master/images/scene1.gif" alt="Scene1" width="400" height="200"/> </div>
+ ##  <div> <img src="https://github.com/ksm26/SpatioTemporal-Predictions/blob/master/images/scene2.gif" alt="Scene1" width="400" height="200"/> </div>
+ ##  <div> <img src="https://github.com/ksm26/SpatioTemporal-Predictions/blob/master/images/scene3.gif" alt="Scene1" width="400" height="200"/> </div>
+ ##  <div> <img src="https://github.com/ksm26/SpatioTemporal-Predictions/blob/master/images/scene4.gif" alt="Scene1" width="400" height="200"/> </div>
+ ### &emsp; &emsp; Scene1 &emsp; &emsp; &emsp; &emsp;  &emsp; Scene2 &emsp; &emsp; &emsp; &emsp; &emsp; Scene3 &emsp; &emsp; &emsp; &emsp; &emsp; Scene4
 
-![ezgif-4-d586b8042543](https://github.com/ksm26/SpatioTemporal-Predictions/blob/master/images/scene2.gif)
-
-![ezgif-4-88d258069438](https://github.com/ksm26/SpatioTemporal-Predictions/blob/master/images/scene3.gif)
-
-![ezgif-4-a96fdd903d91](https://github.com/ksm26/SpatioTemporal-Predictions/blob/master/images/scene4.gif)
 
 The dataset is hosted at: <a href="https://archive.org/details/nuscenes-occupancy-grids-dataset">https://archive.org/details/nuscenes-occupancy-grids-dataset</a>
 
-### &emsp; &emsp; Scene1 &emsp; &emsp; &emsp; &emsp;  &emsp; Scene2 &emsp; &emsp; &emsp; &emsp; &emsp; Scene3 &emsp; &emsp; &emsp; &emsp; &emsp; Scene4
 
