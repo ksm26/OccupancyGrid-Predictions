@@ -11,15 +11,14 @@ Reliably predicting future occupancy of highly dynamic urban environments is an 
 ##  <div align="center"> <img src="https://github.com/ksm26/SpatioTemporal-Predictions/blob/master/images/teaser.png" alt="teaser" width="800" height="400"/> </div>
 
 ## Dataset generation
-We proceed by making pertubations in RL agent's internal dynamics and testing the performance of RL policies over this dynamic changes. For reference, the performance of TD3 on different perturbed agents can be seen as:
- 
- ##  <div> <img src="https://github.com/ksm26/SpatioTemporal-Predictions/blob/master/images/scene1.gif" alt="Scene1" width="400" height="200"/> </div>
- ##  <div> <img src="https://github.com/ksm26/SpatioTemporal-Predictions/blob/master/images/scene2.gif" alt="Scene1" width="400" height="200"/> </div>
- ##  <div> <img src="https://github.com/ksm26/SpatioTemporal-Predictions/blob/master/images/scene3.gif" alt="Scene1" width="400" height="200"/> </div>
- ##  <div> <img src="https://github.com/ksm26/SpatioTemporal-Predictions/blob/master/images/scene4.gif" alt="Scene1" width="400" height="200"/> </div>
- ### &emsp; &emsp; Scene1 &emsp; &emsp; &emsp; &emsp;  &emsp; Scene2 &emsp; &emsp; &emsp; &emsp; &emsp; Scene3 &emsp; &emsp; &emsp; &emsp; &emsp; Scene4
-
-
 The dataset is hosted at: <a href="https://archive.org/details/nuscenes-occupancy-grids-dataset">https://archive.org/details/nuscenes-occupancy-grids-dataset</a>
+
+We proceed by generating occupancy grids from NuScenes dataset by superimposing the 3D bounding boxes on the the grids. The generated dataset can be seen as:
+ 
+ ##  <div> <img src="https://github.com/ksm26/SpatioTemporal-Predictions/blob/master/images/scene1.gif" alt="Scene1" width="300" height="200"/> </div>
+ ##  <div> <img src="https://github.com/ksm26/SpatioTemporal-Predictions/blob/master/images/scene2.gif" alt="Scene1" width="300" height="200"/> </div>
+
+
+
 
 
