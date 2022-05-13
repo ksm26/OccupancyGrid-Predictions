@@ -1,6 +1,7 @@
 import torch 
 import torch.nn as nn 
 
+# Code source: https://github.com/thuml/predrnn-pytorch/blob/master/core/layers/SpatioTemporalLSTMCell.py
 
 class SpatioTemporalLSTMCell(nn.Module):
     def __init__(self, in_channel, num_hidden, filter_size, stride):
