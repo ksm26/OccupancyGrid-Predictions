@@ -4,6 +4,8 @@ import torch.nn as nn
 import math 
 from models.SpatioTemporalLSTMCell import SpatioTemporalLSTMCell, ConvLSTMCell
         
+# Source code for Reverse schedule sampling - https://github.com/thuml/predrnn-pytorch/blob/master/core/models/predrnn_v2.py
+
 def reverse_schedule_sampling_exp(args, numiterations, imgwd, imght, imgchannels):
     # setting the r_eta 
     if numiterations < args.r_sampling_step1: r_eta = 0.5
