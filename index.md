@@ -1,4 +1,7 @@
-Reliably predicting future occupancy of highly dynamic urban environments is an important precursor for safe autonomous navigation. Common challenges in the prediction include forecasting the relative position of other vehicles, modelling the dynamics of vehicles subjected to different traffic conditions, and vanishing surrounding objects. To tackle these challenges, we propose a spatio-temporal prediction network pipeline that takes the past information from the environment and semantic labels separately for generating future occupancy predictions. Compared to the current SOTA, our approach predicts occupancy for a longer horizon of 3 seconds and in a relatively complex environment from the nuScenes dataset. Our experimental results demonstrate the ability of spatio-temporal networks to understand scene dynamics without the need for HD-Maps and explicit modeling dynamic objects. We publicly release our occupancy grid dataset based on nuScenes to support further research.
+<p align="justify">
+    Reliably predicting future occupancy of highly dynamic urban environments is an important precursor for safe autonomous navigation. Common challenges in the prediction include forecasting the relative position of other vehicles, modelling the dynamics of vehicles subjected to different traffic conditions, and vanishing surrounding objects. To tackle these challenges, we propose a spatio-temporal prediction network pipeline that takes the past information from the environment and semantic labels separately for generating future occupancy predictions. Compared to the current SOTA, our approach predicts occupancy for a longer horizon of 3 seconds and in a relatively complex environment from the nuScenes dataset. Our experimental results demonstrate the ability of spatio-temporal networks to understand scene dynamics without the need for HD-Maps and explicit modeling dynamic objects. We publicly release our occupancy grid dataset based on nuScenes to support further research.
+</p>
+
 
 <a href="url">
   <img src="https://user-images.githubusercontent.com/24546547/177139170-bfd37bd5-9324-4392-b565-faad2138b19e.png" align="center" height="440">
@@ -6,7 +9,10 @@ Reliably predicting future occupancy of highly dynamic urban environments is an 
 
 
 ## <h3 align="center" id="heading">Generating Occupancy grids dataset</h3>
+
+<p align="justify">
 Occupancy grid maps are generated from the [nuScenes dataset](https://arxiv.org/pdf/1903.11027.pdf). Agents belonging to the ’Vehicles’ category are of interest and being marked by ’green’ semantic pixel labels using the projections of ground truth 3D bounding boxes. Objects of any other type including the static environment are marked in ’blue’. Different road crossing motion scenarios from the dataset are presented below: 
+</p>
 
 <a href="url">
   <img src="https://user-images.githubusercontent.com/24546547/177139351-ae4486d2-c493-434f-bba2-bb63fcec0c82.png" align="center" height="240"  width="240">
@@ -15,27 +21,33 @@ Occupancy grid maps are generated from the [nuScenes dataset](https://arxiv.org/
   <img src="https://user-images.githubusercontent.com/24546547/177139431-a9630317-3c7f-4164-ad70-66e657d2e73f.png" align="center" height="240"  width="240">
 </a>
 
+<p align="justify">
 We publicly release the Occupancy Grid Maps dataset consisting of static environment and semantic labels for ease in long-term prediction. The dataset is available [here](https://archive.org/details/nuscenes-occupancy-grids-dataset)
 
 The paper demonstrate the performance of two state-of-art video prediction networks - [PredRNN](https://arxiv.org/pdf/2103.09504.pdf) and [ConvLSTM](https://papers.nips.cc/paper/2015/file/07563a3fe3bbe7e3ba84431ad9d055af-Paper.pdf) for this dataset. Under the training scheme we observe that the models have consistent performance even for long-term predictions.
-
+</p>
 
 ## <h3 align="center" id="heading">Video</h3>
-<p align="center">
+<p align="justify">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/4W7dT-HfQPQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </p>
 
 
 ## <h3 align="center" id="heading">Spatio-temporal architecture</h3>
+<p align="justify">
 We present an Spatio-Temporal Network Pipeline for long-term future occupancy grid prediction. Our approach uses semantic labels of the vehicle in OGMs to model the specific motion type of agents in the prediction rather than using a generic combined prediction of static and dynamic cells that contains the environment and various types of agents such as cars, pedestrians, cyclists, etc.
 
 Semantic occupancy grids consisting of environment and vehicles over the time frames of 0.5 sec. Grids are converted into binary images and separately fed to spatio-temporal networks. We evaluate two spatio-temporal networks: PredRNN and ConvLSTM
+</p>
+ 
 ![architecture](https://user-images.githubusercontent.com/24546547/177139739-ebd21b21-4644-48a7-bee2-97b32dc8c3d8.png)
 
 
 ## <h3 align="center" id="heading">Qualitative Results</h3>
 
+<p align="justify">
 A scene depicting few static vehicles and a vehicle going in reverse direction. Comparison between two spatio-temporal learning networks over the future predictions of 1 sec, 2 sec and 3 sec.
+</p>
 
 <a href="url">
   <img src="https://user-images.githubusercontent.com/24546547/177150383-e4e77415-1f9e-4ed8-8932-4ffb55ff3e59.jpg" align="center" height="180">
@@ -55,7 +67,9 @@ A scene depicting few static vehicles and a vehicle going in reverse direction. 
 
 ## <h3 align="center" id="heading">Quantitative Results</h3>
 
+<p align="justify">
 Frame-wise PSNR(↑), SSIM(↑), Static MSE (↓), and Semantic MSE (↓) results on the generated Occupancy grid map dataset are presented below. The prediction horizon is 3 sec during training and testing phases. Note that PredRNN (combined) and ConvLSTM (combined) predict an entire OGM, thus separate Static and Semantic MSE cannot be reported for these cases. The Semantic MSE result from the [linear projection](https://hal.inria.fr/hal-03416222/document) of vehicle’s bounding boxes is also presented in (d).
+</p>
 
 <a href="url">
   <img src="https://user-images.githubusercontent.com/24546547/177152101-6ed53611-84f5-4290-9853-086f9290a7c8.jpg" align="center" height="180">
