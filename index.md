@@ -1,62 +1,80 @@
 Reliably predicting future occupancy of highly dynamic urban environments is an important precursor for safe autonomous navigation. Common challenges in the prediction include forecasting the relative position of other vehicles, modelling the dynamics of vehicles subjected to different traffic conditions, and vanishing surrounding objects. To tackle these challenges, we propose a spatio-temporal prediction network pipeline that takes the past information from the environment and semantic labels separately for generating future occupancy predictions. Compared to the current SOTA, our approach predicts occupancy for a longer horizon of 3 seconds and in a relatively complex environment from the nuScenes dataset. Our experimental results demonstrate the ability of spatio-temporal networks to understand scene dynamics without the need for HD-Maps and explicit modeling dynamic objects. We publicly release our occupancy grid dataset based on nuScenes to support further research.
 
-<p align="center">
-<iframe width="560" height="315" src="https://github.com/ksm26/OccupancyGrid-Predictions/blob/master/images/teaser.png" title="teaser image" frameborder="0" allowfullscreen></iframe>
-</p>
+<a href="url">
+  <img src="https://user-images.githubusercontent.com/24546547/177139170-bfd37bd5-9324-4392-b565-faad2138b19e.png" align="center" height="440">
+</a>
 
 
-## Generate Occupancy Grids Dataset
-Occupancy grid maps generated from the nuScenes dataset. Agents belonging to the ’Vehicles’ category are of interest and being marked by ’green’ semantic pixel labels using the projections of ground truth 3D bounding boxes. Objects of any other type including the static environment are marked in ’blue’. Different road crossing motion scenarios from the dataset are presented ![dataset](https://github.com/ksm26/OccupancyGrid-Predictions/blob/master/images/scene1.gif) | ![](https://github.com/ksm26/OccupancyGrid-Predictions/blob/master/images/scene2.gif) | ![]( https://github.com/ksm26/OccupancyGrid-Predictions/blob/master/images/scene3.gif) | ![](https://github.com/ksm26/OccupancyGrid-Predictions/blob/master/images/scene4.gif)
+## <h3 align="center" id="heading">Generating Occupancy grids dataset</h3>
+Occupancy grid maps are generated from the [nuScenes dataset](https://arxiv.org/pdf/1903.11027.pdf). Agents belonging to the ’Vehicles’ category are of interest and being marked by ’green’ semantic pixel labels using the projections of ground truth 3D bounding boxes. Objects of any other type including the static environment are marked in ’blue’. Different road crossing motion scenarios from the dataset are presented below: 
 
-To evaluate robustness and efficacy of event-based camera to act as a redundant sensor modality, the RGB images were corrupted by adding noise, blur and weather conditions. The performance is evaluated over 5 severity levels for each of the 15 corruption types. The corruption method is adapted from this work by [D. Hendrycks et al](https://arxiv.org/pdf/1903.12261.pdf?ref=https://githubhelp.com). All the evaluated models are trained only clean dataset, only during testing, the RGB images are corrupted as shown in the figure. For sensor fusion models, image dropouts were used with a probaility of 0.15 during training.
-  
+<a href="url">
+  <img src="https://user-images.githubusercontent.com/24546547/177139351-ae4486d2-c493-434f-bba2-bb63fcec0c82.png" align="center" height="240"  width="240">
+  <img src="https://user-images.githubusercontent.com/24546547/177139372-3db4e24e-f8a4-4380-aa39-7849b92617d7.png" align="center" height="240"  width="240">
+  <img src="https://user-images.githubusercontent.com/24546547/177139409-bb56e1f3-26ed-4d6a-a30a-814718f96659.png" align="center" height="240"  width="240">
+  <img src="https://user-images.githubusercontent.com/24546547/177139431-a9630317-3c7f-4164-ad70-66e657d2e73f.png" align="center" height="240"  width="240">
+</a>
 
-## Video
+We publicly release the Occupancy Grid Maps dataset consisting of static environment and semantic labels for ease in long-term prediction. The dataset is available [here](https://archive.org/details/nuscenes-occupancy-grids-dataset)
+
+The paper demonstrate the performance of two state-of-art video prediction networks - [PredRNN](https://arxiv.org/pdf/2103.09504.pdf) and [ConvLSTM](https://papers.nips.cc/paper/2015/file/07563a3fe3bbe7e3ba84431ad9d055af-Paper.pdf) for this dataset. Under the training scheme we observe that the models have consistent performance even for long-term predictions.
+
+
+## <h3 align="center" id="heading">Video</h3>
 <p align="center">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/4W7dT-HfQPQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </p>
 
 
-## Sensor Fusion Models
-In this work, we propose a Feature Pyramid Net fusion (FPN) which uses ResNet-50 used as backbone for feature extraction as shown in figure below. Events and RGB features are fused at multiple scales before feeding it to the FPN layers.
-![Network_Architecture](https://user-images.githubusercontent.com/11161532/172815632-db193a8e-4c55-4572-aadc-87c22e6230a7.png)
+## <h3 align="center" id="heading">Spatio-temporal architecture</h3>
+We present an Spatio-Temporal Network Pipeline for long-term future occupancy grid prediction. Our approach uses semantic labels of the vehicle in OGMs to model the specific motion type of agents in the prediction rather than using a generic combined prediction of static and dynamic cells that contains the environment and various types of agents such as cars, pedestrians, cyclists, etc.
 
-Apart from this, we also evaluate the efficacy of combining events and RGB channels early. In this work we have evaluated 2 type of event representations: 
--  a) [Events-Gray](https://arxiv.org/pdf/1906.07165.pdf) (converting events to a gray scale image) and 
--  b) [Event-voxels](https://openaccess.thecvf.com/content_CVPR_2019/papers/Zhu_Unsupervised_Event-Based_Learning_of_Optical_Flow_Depth_and_Egomotion_CVPR_2019_paper.pdf)
+Semantic occupancy grids consisting of environment and vehicles over the time frames of 0.5 sec. Grids are converted into binary images and separately fed to spatio-temporal networks. We evaluate two spatio-temporal networks: PredRNN and ConvLSTM
+![architecture](https://user-images.githubusercontent.com/24546547/177139739-ebd21b21-4644-48a7-bee2-97b32dc8c3d8.png)
 
-## Results
-| Model        | Input           | mAP    | rPC   |
-| :---         |    :----:       |   ---: | ---:  |
-| RetinaNet-50 | Event Voxel     | 0.12   | -     |
-| RetinaNet-50 | Event Gray      | 0.12   | -     |
-| RetinaNet-50 | RGB             | 0.25   | 38.6  |
-| Early Fusion | Event Gray+RGB  | 0.26   | 40.4  |
-| FPN-Fusion   | Event Gray+RGB  | 0.25   | 60.8  |
-| Early Fusion | Event Voxel+RGB | 0.24   | 66.2  |
-| FPN-Fusion   | Event Voxel+RGB | 0.24   | 68.7  |
 
-### Markdown
+## <h3 align="center" id="heading">Qualitative Results</h3>
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+A scene depicting few static vehicles and a vehicle going in reverse direction. Comparison between two spatio-temporal learning networks over the future predictions of 1 sec, 2 sec and 3 sec.
 
-```markdown
-Syntax highlighted code block
+<a href="url">
+  <img src="https://user-images.githubusercontent.com/24546547/177150383-e4e77415-1f9e-4ed8-8932-4ffb55ff3e59.jpg" align="center" height="180">
+</a>
+(a) Ground truth 
 
-# Header 1
-## Header 2
-### Header 3
+<a href="url">
+  <img src="https://user-images.githubusercontent.com/24546547/177150412-cc8c02b8-4ae9-40a7-9726-76b611254ed3.jpg" align="center" height="180">
+</a>
+(b) PredRNN predicitons
 
-- Bulleted
-- List
+<a href="url">
+  <img src="https://user-images.githubusercontent.com/24546547/177150364-58998cf4-04a4-44d9-b709-3df36412cd94.jpg" align="center" height="180">
+</a>
+(c) ConvLSTM predictions
 
-1. Numbered
-2. List
 
-**Bold** and _Italic_ and `Code` text
+## <h3 align="center" id="heading">Quantitative Results</h3>
 
-[Link](url) and ![Image](src)
-```
+Frame-wise PSNR(↑), SSIM(↑), Static MSE (↓), and Semantic MSE (↓) results on the generated Occupancy grid map dataset are presented below. The prediction horizon is 3 sec during training and testing phases. Note that PredRNN (combined) and ConvLSTM (combined) predict an entire OGM, thus separate Static and Semantic MSE cannot be reported for these cases. The Semantic MSE result from the [linear projection](https://hal.inria.fr/hal-03416222/document) of vehicle’s bounding boxes is also presented in (d).
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+<a href="url">
+  <img src="https://user-images.githubusercontent.com/24546547/177152101-6ed53611-84f5-4290-9853-086f9290a7c8.jpg" align="center" height="180">
+  <img src="https://user-images.githubusercontent.com/24546547/177152127-6526887c-4bb3-4305-8116-d418359aa13d.jpg" align="center" height="180">
+</a>
+
+<a href="url">
+  <img src="https://user-images.githubusercontent.com/24546547/177152144-99bd9fc0-bae6-4edd-b56c-4f3ea9f26732.jpg" align="center" height="180">
+  <img src="https://user-images.githubusercontent.com/24546547/177152178-636a03b6-b636-429d-a3f9-c3fa5d377df9.jpg" align="center" height="180">
+</a>
+
+
+## <h3 align="center" id="heading">Bibtex</h3>
+
+@article{mann2022predicting,
+  title={Predicting Future Occupancy Grids in Dynamic Environment with Spatio-Temporal Learning},
+  author={Mann, Khushdeep Singh and Tomy, Abhishek and Paigwar, Anshul and Renzaglia, Alessandro and Laugier, Christian},
+  journal={arXiv preprint arXiv:2205.03212},
+  year={2022}
+}
+
 
