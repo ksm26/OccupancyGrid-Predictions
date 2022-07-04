@@ -59,20 +59,20 @@ Semantic occupancy grids consisting of environment and vehicles over the time fr
 A scene depicting few static vehicles and a vehicle going in reverse direction. Comparison between two spatio-temporal learning networks over the future predictions of 1 sec, 2 sec and 3 sec.
 </p>
 
-<a href="url">
+<a href="url" align="center">
   <img src="https://user-images.githubusercontent.com/24546547/177150383-e4e77415-1f9e-4ed8-8932-4ffb55ff3e59.jpg" align="center" height="180">
 </a>
-(a) Ground truth 
+<p align="center">Ground truth </p>
 
-<a href="url">
+<a href="url" align="center">
   <img src="https://user-images.githubusercontent.com/24546547/177150412-cc8c02b8-4ae9-40a7-9726-76b611254ed3.jpg" align="center" height="180">
 </a>
-(b) PredRNN predicitons
+<p align="center">PredRNN predicitons</p>
 
-<a href="url">
+<a href="url" align="center">
   <img src="https://user-images.githubusercontent.com/24546547/177150364-58998cf4-04a4-44d9-b709-3df36412cd94.jpg" align="center" height="180">
 </a>
-(c) ConvLSTM predictions
+<p align="center">ConvLSTM predicitons</p>
 
 
 <h3 align="center" id="heading">
