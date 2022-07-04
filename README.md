@@ -2,6 +2,9 @@
 
 ##  <div align="center"> <img src="https://github.com/ksm26/SpatioTemporal-Predictions/blob/master/images/Inria.jpg" alt="INRIA" width="200" height="50"/> </div>
 
+<p align="center">
+ <a href="https://arxiv.org/pdf/2205.03212.pdf">Paper</a> | <a href="https://ksm26.github.io/OccupancyGrid-Predictions/">Project website</a> | <a href="https://www.youtube.com/watch?v=4W7dT-HfQPQ">Video</a>
+</p>
 
 <h3 align="center" id="heading">
     Abstract
