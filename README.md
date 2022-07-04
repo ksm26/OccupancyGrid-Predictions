@@ -93,10 +93,10 @@ Frame-wise PSNR(↑), SSIM(↑), Static MSE (↓), and Semantic MSE (↓) result
 </p>
 
 <a href="url">
-  <img src="https://user-images.githubusercontent.com/24546547/177152101-6ed53611-84f5-4290-9853-086f9290a7c8.jpg" align="center" height="160" width="180">
-  <img src="https://user-images.githubusercontent.com/24546547/177152127-6526887c-4bb3-4305-8116-d418359aa13d.jpg" align="center" height="160" width="180">
-  <img src="https://user-images.githubusercontent.com/24546547/177152144-99bd9fc0-bae6-4edd-b56c-4f3ea9f26732.jpg" align="center" height="160" width="180">
-  <img src="https://user-images.githubusercontent.com/24546547/177152178-636a03b6-b636-429d-a3f9-c3fa5d377df9.jpg" align="center" height="160" width="180">
+  <img src="https://user-images.githubusercontent.com/24546547/177152101-6ed53611-84f5-4290-9853-086f9290a7c8.jpg" align="center" height="180" width="200">
+  <img src="https://user-images.githubusercontent.com/24546547/177152127-6526887c-4bb3-4305-8116-d418359aa13d.jpg" align="center" height="180" width="200">
+  <img src="https://user-images.githubusercontent.com/24546547/177152144-99bd9fc0-bae6-4edd-b56c-4f3ea9f26732.jpg" align="center" height="180" width="200">
+  <img src="https://user-images.githubusercontent.com/24546547/177152178-636a03b6-b636-429d-a3f9-c3fa5d377df9.jpg" align="center" height="180" width="200">
 </a>
 
 
