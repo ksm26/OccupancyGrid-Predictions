@@ -24,7 +24,7 @@ Occupancy grid maps are generated from the <a href="https://arxiv.org/pdf/1903.1
 </a>
 
 <p align="justify">
-We publicly release the Occupancy Grid Maps dataset consisting of static environment and semantic labels for ease in long-term prediction. The dataset is available ![here](https://archive.org/details/nuscenes-occupancy-grids-dataset)
+We publicly release the Occupancy Grid Maps dataset consisting of static environment and semantic labels for ease in long-term prediction. The dataset is available <a href="https://archive.org/details/nuscenes-occupancy-grids-dataset">here</a> 
 
 The paper demonstrate the performance of two state-of-art video prediction networks - <a href="https://arxiv.org/pdf/2103.09504.pdf">PredRNN</a> and <a href="https://papers.nips.cc/paper/2015/file/07563a3fe3bbe7e3ba84431ad9d055af-Paper.pdf">ConvLSTM</a> for this dataset. Under the training scheme we observe that the models have consistent performance even for long-term predictions.
 </p>
