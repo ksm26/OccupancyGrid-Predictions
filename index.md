@@ -1,8 +1,36 @@
-## Welcome to GitHub Pages
+### Predicting Future Occupancy Grids in Dynamic Environment with Spatio-Temporal Learning
 
-You can use the [editor on GitHub](https://github.com/ksm26/OccupancyGrid-Predictions/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files. This project is about our paper.
+Reliably predicting future occupancy of highly dynamic urban environments is an important precursor for safe autonomous navigation. Common challenges in the prediction include forecasting the relative position of other vehicles, modelling the dynamics of vehicles subjected to different traffic conditions, and vanishing surrounding objects. To tackle these challenges, we propose a spatio-temporal prediction network pipeline that takes the past information from the environment and semantic labels separately for generating future occupancy predictions. Compared to the current SOTA, our approach predicts occupancy for a longer horizon of 3 seconds and in a relatively complex environment from the nuScenes dataset. Our experimental results demonstrate the ability of spatio-temporal networks to understand scene dynamics without the need for HD-Maps and explicit modeling dynamic objects. We publicly release our occupancy grid dataset based on nuScenes to support further research.
+![dsec](https://user-images.githubusercontent.com/11161532/173057592-c92be2c5-a915-48e3-bb9e-f352cafb8a07.png)
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+
+## Datset and training
+The DSEC dataset contains data from two event and frame-based cameras in stereo setup recorded from a moving vehicle in cities across Switzerland and data from both sensor modalities are publicly released. However, they lack The object detection labels which we generated using [YOLOv5](https://github.com/ultralytics/yolov5) on the left RGB images and then transferred to the event frame using homographic transformation and refinement.
+![dsec](https://user-images.githubusercontent.com/11161532/173057592-c92be2c5-a915-48e3-bb9e-f352cafb8a07.png)
+
+To evaluate robustness and efficacy of event-based camera to act as a redundant sensor modality, the RGB images were corrupted by adding noise, blur and weather conditions. The performance is evaluated over 5 severity levels for each of the 15 corruption types. The corruption method is adapted from this work by [D. Hendrycks et al](https://arxiv.org/pdf/1903.12261.pdf?ref=https://githubhelp.com). All the evaluated models are trained only clean dataset, only during testing, the RGB images are corrupted as shown in the figure. For sensor fusion models, image dropouts were used with a probaility of 0.15 during training.
+  
+  
+![15_corruptImages](https://user-images.githubusercontent.com/11161532/173067756-206afeac-6129-48b6-b3df-8dc10cd1ff53.jpg)  
+
+## Sensor Fusion Models
+In this work, we propose a Feature Pyramid Net fusion (FPN) which uses ResNet-50 used as backbone for feature extraction as shown in figure below. Events and RGB features are fused at multiple scales before feeding it to the FPN layers.
+![Network_Architecture](https://user-images.githubusercontent.com/11161532/172815632-db193a8e-4c55-4572-aadc-87c22e6230a7.png)
+
+Apart from this, we also evaluate the efficacy of combining events and RGB channels early. In this work we have evaluated 2 type of event representations: 
+-  a) [Events-Gray](https://arxiv.org/pdf/1906.07165.pdf) (converting events to a gray scale image) and 
+-  b) [Event-voxels](https://openaccess.thecvf.com/content_CVPR_2019/papers/Zhu_Unsupervised_Event-Based_Learning_of_Optical_Flow_Depth_and_Egomotion_CVPR_2019_paper.pdf)
+
+## Results
+| Model        | Input           | mAP    | rPC   |
+| :---         |    :----:       |   ---: | ---:  |
+| RetinaNet-50 | Event Voxel     | 0.12   | -     |
+| RetinaNet-50 | Event Gray      | 0.12   | -     |
+| RetinaNet-50 | RGB             | 0.25   | 38.6  |
+| Early Fusion | Event Gray+RGB  | 0.26   | 40.4  |
+| FPN-Fusion   | Event Gray+RGB  | 0.25   | 60.8  |
+| Early Fusion | Event Voxel+RGB | 0.24   | 66.2  |
+| FPN-Fusion   | Event Voxel+RGB | 0.24   | 68.7  |
 
 ### Markdown
 
@@ -30,7 +58,7 @@ For more details see [Basic writing and formatting syntax](https://docs.github.c
 
 ### Jekyll Themes
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/ksm26/OccupancyGrid-Predictions/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/abhishek1411/event-rgb-fusion/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
 
 ### Support or Contact
 
