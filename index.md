@@ -9,7 +9,9 @@ To evaluate robustness and efficacy of event-based camera to act as a redundant 
   
 
 ## Video
-![Youtube video](https://www.youtube.com/watch?v=4W7dT-HfQPQ&t=23s)
+<p align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4W7dT-HfQPQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</p>
 
 
 ## Sensor Fusion Models
