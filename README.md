@@ -41,14 +41,6 @@ We publicly release the Occupancy Grid Maps dataset consisting of static environ
 The paper demonstrate the performance of two state-of-art video prediction networks - <a href="https://arxiv.org/pdf/2103.09504.pdf">PredRNN</a> and <a href="https://papers.nips.cc/paper/2015/file/07563a3fe3bbe7e3ba84431ad9d055af-Paper.pdf">ConvLSTM</a> for this dataset. Under the training scheme we observe that the models have consistent performance even for long-term predictions.
 </p>
 
-<h3 align="center" id="heading">
-    Video
-</h3>
-
-<p align="justify">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/4W7dT-HfQPQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</p>
-
 
 <h3 align="center" id="heading">
     Spatio-temporal architecture
