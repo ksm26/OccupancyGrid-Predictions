@@ -8,7 +8,9 @@
 </a>
 
 
-## <h3 align="center" id="heading">Generating Occupancy grids dataset</h3>
+<h3 align="center" id="heading">
+    Generating Occupancy grids dataset
+</h3>
 
 <p align="justify">
 Occupancy grid maps are generated from the [nuScenes dataset](https://arxiv.org/pdf/1903.11027.pdf). Agents belonging to the ’Vehicles’ category are of interest and being marked by ’green’ semantic pixel labels using the projections of ground truth 3D bounding boxes. Objects of any other type including the static environment are marked in ’blue’. Different road crossing motion scenarios from the dataset are presented below: 
