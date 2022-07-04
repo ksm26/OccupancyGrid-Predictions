@@ -13,7 +13,7 @@
 </h3>
 
 <p align="justify">
-Occupancy grid maps are generated from the [nuScenes dataset](https://arxiv.org/pdf/1903.11027.pdf). Agents belonging to the ’Vehicles’ category are of interest and being marked by ’green’ semantic pixel labels using the projections of ground truth 3D bounding boxes. Objects of any other type including the static environment are marked in ’blue’. Different road crossing motion scenarios from the dataset are presented below: 
+Occupancy grid maps are generated from the ![nuScenes dataset](https://arxiv.org/pdf/1903.11027.pdf). Agents belonging to the ’Vehicles’ category are of interest and being marked by ’green’ semantic pixel labels using the projections of ground truth 3D bounding boxes. Objects of any other type including the static environment are marked in ’blue’. Different road crossing motion scenarios from the dataset are presented below: 
 </p>
 
 <a href="url">
@@ -24,18 +24,24 @@ Occupancy grid maps are generated from the [nuScenes dataset](https://arxiv.org/
 </a>
 
 <p align="justify">
-We publicly release the Occupancy Grid Maps dataset consisting of static environment and semantic labels for ease in long-term prediction. The dataset is available [here](https://archive.org/details/nuscenes-occupancy-grids-dataset)
+We publicly release the Occupancy Grid Maps dataset consisting of static environment and semantic labels for ease in long-term prediction. The dataset is available ![here](https://archive.org/details/nuscenes-occupancy-grids-dataset)
 
-The paper demonstrate the performance of two state-of-art video prediction networks - [PredRNN](https://arxiv.org/pdf/2103.09504.pdf) and [ConvLSTM](https://papers.nips.cc/paper/2015/file/07563a3fe3bbe7e3ba84431ad9d055af-Paper.pdf) for this dataset. Under the training scheme we observe that the models have consistent performance even for long-term predictions.
+The paper demonstrate the performance of two state-of-art video prediction networks - ![PredRNN](https://arxiv.org/pdf/2103.09504.pdf) and ![ConvLSTM](https://papers.nips.cc/paper/2015/file/07563a3fe3bbe7e3ba84431ad9d055af-Paper.pdf) for this dataset. Under the training scheme we observe that the models have consistent performance even for long-term predictions.
 </p>
 
-## <h3 align="center" id="heading">Video</h3>
+<h3 align="center" id="heading">
+    Video
+</h3>
+
 <p align="justify">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/4W7dT-HfQPQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </p>
 
 
-## <h3 align="center" id="heading">Spatio-temporal architecture</h3>
+<h3 align="center" id="heading">
+    Spatio-temporal architecture
+</h3>
+
 <p align="justify">
 We present an Spatio-Temporal Network Pipeline for long-term future occupancy grid prediction. Our approach uses semantic labels of the vehicle in OGMs to model the specific motion type of agents in the prediction rather than using a generic combined prediction of static and dynamic cells that contains the environment and various types of agents such as cars, pedestrians, cyclists, etc.
 
@@ -45,7 +51,9 @@ Semantic occupancy grids consisting of environment and vehicles over the time fr
 ![architecture](https://user-images.githubusercontent.com/24546547/177139739-ebd21b21-4644-48a7-bee2-97b32dc8c3d8.png)
 
 
-## <h3 align="center" id="heading">Qualitative Results</h3>
+<h3 align="center" id="heading">
+    Qualitative Results
+</h3>
 
 <p align="justify">
 A scene depicting few static vehicles and a vehicle going in reverse direction. Comparison between two spatio-temporal learning networks over the future predictions of 1 sec, 2 sec and 3 sec.
@@ -67,10 +75,12 @@ A scene depicting few static vehicles and a vehicle going in reverse direction. 
 (c) ConvLSTM predictions
 
 
-## <h3 align="center" id="heading">Quantitative Results</h3>
+<h3 align="center" id="heading">
+    Quantitative Results
+</h3>
 
 <p align="justify">
-Frame-wise PSNR(↑), SSIM(↑), Static MSE (↓), and Semantic MSE (↓) results on the generated Occupancy grid map dataset are presented below. The prediction horizon is 3 sec during training and testing phases. Note that PredRNN (combined) and ConvLSTM (combined) predict an entire OGM, thus separate Static and Semantic MSE cannot be reported for these cases. The Semantic MSE result from the [linear projection](https://hal.inria.fr/hal-03416222/document) of vehicle’s bounding boxes is also presented in (d).
+Frame-wise PSNR(↑), SSIM(↑), Static MSE (↓), and Semantic MSE (↓) results on the generated Occupancy grid map dataset are presented below. The prediction horizon is 3 sec during training and testing phases. Note that PredRNN (combined) and ConvLSTM (combined) predict an entire OGM, thus separate Static and Semantic MSE cannot be reported for these cases. The Semantic MSE result from the ![linear projection](https://hal.inria.fr/hal-03416222/document) of vehicle’s bounding boxes is also presented in (d).
 </p>
 
 <a href="url">
@@ -84,7 +94,9 @@ Frame-wise PSNR(↑), SSIM(↑), Static MSE (↓), and Semantic MSE (↓) result
 </a>
 
 
-## <h3 align="center" id="heading">Bibtex</h3>
+<h3 align="center" id="heading">
+    Bibtex
+</h3>
 
 @article{mann2022predicting,
   title={Predicting Future Occupancy Grids in Dynamic Environment with Spatio-Temporal Learning},
