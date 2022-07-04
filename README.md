@@ -12,8 +12,8 @@ Reliably predicting future occupancy of highly dynamic urban environments is an 
 </p>
 
 
-<a href="url">
-  <img src="https://user-images.githubusercontent.com/24546547/177139170-bfd37bd5-9324-4392-b565-faad2138b19e.png" align="center" height="440">
+<a align="justify" href="url">
+  <img src="https://user-images.githubusercontent.com/24546547/177139170-bfd37bd5-9324-4392-b565-faad2138b19e.png" align="center" height="380">
 </a>
 
 
