@@ -99,12 +99,11 @@ Frame-wise PSNR(↑), SSIM(↑), Static MSE (↓), and Semantic MSE (↓) result
     Bibtex
 </h3>
 
-
-<p align="justify">
+``` 
 @article{mann2022predicting,
   title={Predicting Future Occupancy Grids in Dynamic Environment with Spatio-Temporal Learning},
-  author={Mann, Khushdeep Singh and Tomy, Abhishek and Paigwar, Anshul and Renzaglia, Alessandro and Laugier, Christian},
-  journal={arXiv preprint arXiv:2205.03212},
+  author={Mann, Khushdeep Singh and Tomy, Abhishek and Paigwar, Anshul and Renzaglia, Alessandro and Laugier, Christian},  
+  journal={arXiv preprint arXiv:2205.03212},  
   year={2022}
 }
-</p>
+``` 
