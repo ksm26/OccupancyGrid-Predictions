@@ -33,7 +33,7 @@ The paper demonstrate the performance of two state-of-art video prediction netwo
     Video
 </h3>
 
-<p align="justify">
+<p align="center">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/4W7dT-HfQPQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </p>
 
@@ -83,12 +83,12 @@ A scene depicting few static vehicles and a vehicle going in reverse direction. 
 Frame-wise PSNR(↑), SSIM(↑), Static MSE (↓), and Semantic MSE (↓) results on the generated Occupancy grid map dataset are presented below. The prediction horizon is 3 sec during training and testing phases. Note that PredRNN (combined) and ConvLSTM (combined) predict an entire OGM, thus separate Static and Semantic MSE cannot be reported for these cases. The Semantic MSE result from the <a href="https://hal.inria.fr/hal-03416222/document">linear projection</a> of vehicle’s bounding boxes is also presented in (d).
 </p>
 
-<a href="url">
+<a href="url" align="center">
   <img src="https://user-images.githubusercontent.com/24546547/177152101-6ed53611-84f5-4290-9853-086f9290a7c8.jpg" align="center" height="200">
   <img src="https://user-images.githubusercontent.com/24546547/177152127-6526887c-4bb3-4305-8116-d418359aa13d.jpg" align="center" height="200">
 </a>
 
-<a href="url">
+<a href="url" align="center">
   <img src="https://user-images.githubusercontent.com/24546547/177152144-99bd9fc0-bae6-4edd-b56c-4f3ea9f26732.jpg" align="center" height="200">
   <img src="https://user-images.githubusercontent.com/24546547/177152178-636a03b6-b636-429d-a3f9-c3fa5d377df9.jpg" align="center" height="200">
 </a>
