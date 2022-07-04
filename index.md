@@ -17,10 +17,10 @@ Occupancy grid maps are generated from the <a href="https://arxiv.org/pdf/1903.1
 </p>
 
 <a href="url">
-  <img src="https://user-images.githubusercontent.com/24546547/177139351-ae4486d2-c493-434f-bba2-bb63fcec0c82.png" align="center" height="200"  width="240">
-  <img src="https://user-images.githubusercontent.com/24546547/177139372-3db4e24e-f8a4-4380-aa39-7849b92617d7.png" align="center" height="200"  width="240">
-  <img src="https://user-images.githubusercontent.com/24546547/177139409-bb56e1f3-26ed-4d6a-a30a-814718f96659.png" align="center" height="200"  width="240">
-  <img src="https://user-images.githubusercontent.com/24546547/177139431-a9630317-3c7f-4164-ad70-66e657d2e73f.png" align="center" height="200"  width="240">
+  <img src="https://user-images.githubusercontent.com/24546547/177139351-ae4486d2-c493-434f-bba2-bb63fcec0c82.png" align="center" height="100"  width="240">
+  <img src="https://user-images.githubusercontent.com/24546547/177139372-3db4e24e-f8a4-4380-aa39-7849b92617d7.png" align="center" height="100"  width="240">
+  <img src="https://user-images.githubusercontent.com/24546547/177139409-bb56e1f3-26ed-4d6a-a30a-814718f96659.png" align="center" height="100"  width="240">
+  <img src="https://user-images.githubusercontent.com/24546547/177139431-a9630317-3c7f-4164-ad70-66e657d2e73f.png" align="center" height="100"  width="240">
 </a>
 
 <p align="justify">
