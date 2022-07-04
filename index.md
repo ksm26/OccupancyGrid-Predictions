@@ -1,4 +1,4 @@
-<p align="justify">
+<p align="justify" width="800">
     Reliably predicting future occupancy of highly dynamic urban environments is an important precursor for safe autonomous navigation. Common challenges in the prediction include forecasting the relative position of other vehicles, modelling the dynamics of vehicles subjected to different traffic conditions, and vanishing surrounding objects. To tackle these challenges, we propose a spatio-temporal prediction network pipeline that takes the past information from the environment and semantic labels separately for generating future occupancy predictions. Compared to the current SOTA, our approach predicts occupancy for a longer horizon of 3 seconds and in a relatively complex environment from the nuScenes dataset. Our experimental results demonstrate the ability of spatio-temporal networks to understand scene dynamics without the need for HD-Maps and explicit modeling dynamic objects. We publicly release our occupancy grid dataset based on nuScenes to support further research. 
 </p>
 
@@ -84,13 +84,13 @@ Frame-wise PSNR(↑), SSIM(↑), Static MSE (↓), and Semantic MSE (↓) result
 </p>
 
 <a href="url">
-  <img src="https://user-images.githubusercontent.com/24546547/177152101-6ed53611-84f5-4290-9853-086f9290a7c8.jpg" align="center" height="280">
-  <img src="https://user-images.githubusercontent.com/24546547/177152127-6526887c-4bb3-4305-8116-d418359aa13d.jpg" align="center" height="280">
+  <img src="https://user-images.githubusercontent.com/24546547/177152101-6ed53611-84f5-4290-9853-086f9290a7c8.jpg" align="center" height="200">
+  <img src="https://user-images.githubusercontent.com/24546547/177152127-6526887c-4bb3-4305-8116-d418359aa13d.jpg" align="center" height="200">
 </a>
 
 <a href="url">
-  <img src="https://user-images.githubusercontent.com/24546547/177152144-99bd9fc0-bae6-4edd-b56c-4f3ea9f26732.jpg" align="center" height="280">
-  <img src="https://user-images.githubusercontent.com/24546547/177152178-636a03b6-b636-429d-a3f9-c3fa5d377df9.jpg" align="center" height="280">
+  <img src="https://user-images.githubusercontent.com/24546547/177152144-99bd9fc0-bae6-4edd-b56c-4f3ea9f26732.jpg" align="center" height="200">
+  <img src="https://user-images.githubusercontent.com/24546547/177152178-636a03b6-b636-429d-a3f9-c3fa5d377df9.jpg" align="center" height="200">
 </a>
 
 
