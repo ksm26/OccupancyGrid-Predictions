@@ -26,10 +26,10 @@ Occupancy grid maps are generated from the <a href="https://arxiv.org/pdf/1903.1
 </p>
 
 <a href="url">
-  <img src="https://user-images.githubusercontent.com/24546547/177139351-ae4486d2-c493-434f-bba2-bb63fcec0c82.png" align="center" height="200"  width="240">
-  <img src="https://user-images.githubusercontent.com/24546547/177139372-3db4e24e-f8a4-4380-aa39-7849b92617d7.png" align="center" height="200"  width="240">
-  <img src="https://user-images.githubusercontent.com/24546547/177139409-bb56e1f3-26ed-4d6a-a30a-814718f96659.png" align="center" height="200"  width="240">
-  <img src="https://user-images.githubusercontent.com/24546547/177139431-a9630317-3c7f-4164-ad70-66e657d2e73f.png" align="center" height="200"  width="240">
+  <img src="https://user-images.githubusercontent.com/24546547/177139351-ae4486d2-c493-434f-bba2-bb63fcec0c82.png" align="center" height="180"  width="240">
+  <img src="https://user-images.githubusercontent.com/24546547/177139372-3db4e24e-f8a4-4380-aa39-7849b92617d7.png" align="center" height="180"  width="240">
+  <img src="https://user-images.githubusercontent.com/24546547/177139409-bb56e1f3-26ed-4d6a-a30a-814718f96659.png" align="center" height="180"  width="240">
+  <img src="https://user-images.githubusercontent.com/24546547/177139431-a9630317-3c7f-4164-ad70-66e657d2e73f.png" align="center" height="180"  width="240">
 </a>
 
 <p align="justify">
@@ -93,13 +93,13 @@ Frame-wise PSNR(↑), SSIM(↑), Static MSE (↓), and Semantic MSE (↓) result
 </p>
 
 <a href="url">
-  <img src="https://user-images.githubusercontent.com/24546547/177152101-6ed53611-84f5-4290-9853-086f9290a7c8.jpg" align="center" height="180">
-  <img src="https://user-images.githubusercontent.com/24546547/177152127-6526887c-4bb3-4305-8116-d418359aa13d.jpg" align="center" height="180">
+  <img src="https://user-images.githubusercontent.com/24546547/177152101-6ed53611-84f5-4290-9853-086f9290a7c8.jpg" align="center" height="150">
+  <img src="https://user-images.githubusercontent.com/24546547/177152127-6526887c-4bb3-4305-8116-d418359aa13d.jpg" align="center" height="150">
 </a>
 
 <a href="url">
-  <img src="https://user-images.githubusercontent.com/24546547/177152144-99bd9fc0-bae6-4edd-b56c-4f3ea9f26732.jpg" align="center" height="180">
-  <img src="https://user-images.githubusercontent.com/24546547/177152178-636a03b6-b636-429d-a3f9-c3fa5d377df9.jpg" align="center" height="180">
+  <img src="https://user-images.githubusercontent.com/24546547/177152144-99bd9fc0-bae6-4edd-b56c-4f3ea9f26732.jpg" align="center" height="150">
+  <img src="https://user-images.githubusercontent.com/24546547/177152178-636a03b6-b636-429d-a3f9-c3fa5d377df9.jpg" align="center" height="150">
 </a>
 
 
