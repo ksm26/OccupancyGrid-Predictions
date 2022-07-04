@@ -13,7 +13,7 @@
 </h3>
 
 <p align="justify">
-Occupancy grid maps are generated from the ![nuScenes dataset](https://arxiv.org/pdf/1903.11027.pdf). Agents belonging to the ’Vehicles’ category are of interest and being marked by ’green’ semantic pixel labels using the projections of ground truth 3D bounding boxes. Objects of any other type including the static environment are marked in ’blue’. Different road crossing motion scenarios from the dataset are presented below: 
+Occupancy grid maps are generated from the <a href="https://arxiv.org/pdf/1903.11027.pdf">nuScenes dataset</a>. Agents belonging to the ’Vehicles’ category are of interest and being marked by ’green’ semantic pixel labels using the projections of ground truth 3D bounding boxes. Objects of any other type including the static environment are marked in ’blue’. Different road crossing motion scenarios from the dataset are presented below: 
 </p>
 
 <a href="url">
@@ -26,7 +26,7 @@ Occupancy grid maps are generated from the ![nuScenes dataset](https://arxiv.org
 <p align="justify">
 We publicly release the Occupancy Grid Maps dataset consisting of static environment and semantic labels for ease in long-term prediction. The dataset is available ![here](https://archive.org/details/nuscenes-occupancy-grids-dataset)
 
-The paper demonstrate the performance of two state-of-art video prediction networks - ![PredRNN](https://arxiv.org/pdf/2103.09504.pdf) and ![ConvLSTM](https://papers.nips.cc/paper/2015/file/07563a3fe3bbe7e3ba84431ad9d055af-Paper.pdf) for this dataset. Under the training scheme we observe that the models have consistent performance even for long-term predictions.
+The paper demonstrate the performance of two state-of-art video prediction networks - <a href="https://arxiv.org/pdf/2103.09504.pdf">PredRNN</a> and <a href="https://papers.nips.cc/paper/2015/file/07563a3fe3bbe7e3ba84431ad9d055af-Paper.pdf">ConvLSTM</a> for this dataset. Under the training scheme we observe that the models have consistent performance even for long-term predictions.
 </p>
 
 <h3 align="center" id="heading">
@@ -80,7 +80,7 @@ A scene depicting few static vehicles and a vehicle going in reverse direction. 
 </h3>
 
 <p align="justify">
-Frame-wise PSNR(↑), SSIM(↑), Static MSE (↓), and Semantic MSE (↓) results on the generated Occupancy grid map dataset are presented below. The prediction horizon is 3 sec during training and testing phases. Note that PredRNN (combined) and ConvLSTM (combined) predict an entire OGM, thus separate Static and Semantic MSE cannot be reported for these cases. The Semantic MSE result from the ![linear projection](https://hal.inria.fr/hal-03416222/document) of vehicle’s bounding boxes is also presented in (d).
+Frame-wise PSNR(↑), SSIM(↑), Static MSE (↓), and Semantic MSE (↓) results on the generated Occupancy grid map dataset are presented below. The prediction horizon is 3 sec during training and testing phases. Note that PredRNN (combined) and ConvLSTM (combined) predict an entire OGM, thus separate Static and Semantic MSE cannot be reported for these cases. The Semantic MSE result from the <a href="https://hal.inria.fr/hal-03416222/document">linear projection</a> of vehicle’s bounding boxes is also presented in (d).
 </p>
 
 <a href="url">
