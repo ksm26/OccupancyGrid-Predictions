@@ -1,7 +1,7 @@
 # Predicting Future Occupancy Grids in Dynamic Environment with Spatio-Temporal Learning
 
 Reliably predicting future occupancy of highly dynamic urban environments is an important precursor for safe autonomous navigation. Common challenges in the prediction include forecasting the relative position of other vehicles, modelling the dynamics of vehicles subjected to different traffic conditions, and vanishing surrounding objects. To tackle these challenges, we propose a spatio-temporal prediction network pipeline that takes the past information from the environment and semantic labels separately for generating future occupancy predictions. Compared to the current SOTA, our approach predicts occupancy for a longer horizon of 3 seconds and in a relatively complex environment from the nuScenes dataset. Our experimental results demonstrate the ability of spatio-temporal networks to understand scene dynamics without the need for HD-Maps and explicit modeling dynamic objects. We publicly release our occupancy grid dataset based on nuScenes to support further research.
-![teaser](https://user-images.githubusercontent.com/11161532/173057592-c92be2c5-a915-48e3-bb9e-f352cafb8a07.png) 
+![teaser](https://github.com/ksm26/OccupancyGrid-Predictions/blob/master/images/teaser.png)
 
 
 ## Datset and training
@@ -9,7 +9,6 @@ The DSEC dataset contains data from two event and frame-based cameras in stereo 
 ![dsec](https://user-images.githubusercontent.com/11161532/173057592-c92be2c5-a915-48e3-bb9e-f352cafb8a07.png)
 
 To evaluate robustness and efficacy of event-based camera to act as a redundant sensor modality, the RGB images were corrupted by adding noise, blur and weather conditions. The performance is evaluated over 5 severity levels for each of the 15 corruption types. The corruption method is adapted from this work by [D. Hendrycks et al](https://arxiv.org/pdf/1903.12261.pdf?ref=https://githubhelp.com). All the evaluated models are trained only clean dataset, only during testing, the RGB images are corrupted as shown in the figure. For sensor fusion models, image dropouts were used with a probaility of 0.15 during training.
-  
   
 ![15_corruptImages](https://user-images.githubusercontent.com/11161532/173067756-206afeac-6129-48b6-b3df-8dc10cd1ff53.jpg)  
 
